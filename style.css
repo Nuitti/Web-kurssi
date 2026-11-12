@@ -46,14 +46,16 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
+    flex: 1;
 }
 
 header {
