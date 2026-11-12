@@ -52,10 +52,10 @@ body {
 }
 
 main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
     flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 header {
@@ -91,11 +91,10 @@ button:focus {
 }
 
 footer {
+    margin-top: auto;
     background-color: var(--footer-color);
-    padding: var(--spacing-medium);
-    text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+    text-align: center;
 }
 
 
