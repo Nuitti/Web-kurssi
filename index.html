@@ -20,6 +20,131 @@
         <a href="contact.html">Yhteystiedot</a>
     </nav>
 
+    <section class="calendar-section">
+    <div class="calendar-header">
+        <button id="prevWeek">←</button>
+        <h2>Tämän viikon vapaat ajat</h2>
+        <button id="nextWeek">→</button>
+    </div>
+
+    <table class="calendar">
+        <thead>
+           <tr class="date-row">
+            <th></th>
+                <th>17.11</th>
+                <th>18.11</th>
+                <th>19.11</th>
+                <th>20.11</th>
+                <th>21.11</th>
+                <th>22.11</th>
+                <th>23.11</th>
+            </tr>
+
+            <tr class="weekday-row">
+                <th>Sauna</th>
+                <th>Ma</th>
+                <th>Ti</th>
+                <th>Ke</th>
+                <th>To</th>
+                <th>Pe</th>
+                <th>La</th>
+                <th>Su</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Savusauna</td>
+
+                <td class="vapaa" onclick="varaa('Savusauna','2026-11-17')">
+                    Vapaa<br>18-22
+                 </td>
+
+                <td class="vapaa" onclick="varaa('Savusauna','2026-11-18')">
+                    Vapaa<br>18-22
+                 </td>
+
+                <td class="varattu">
+                    Varattu
+                </td>
+
+                <td class="vapaa" onclick="varaa('Savusauna','2026-11-20')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="vapaa" onclick="varaa('Savusauna','2026-11-21')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="varattu">
+                    Varattu
+                </td>
+
+                <td class="vapaa" onclick="varaa('Savusauna','2026-11-23')">
+                    Vapaa<br>18-22
+                </td>
+            </tr>   
+
+            <tr>
+                <td>Rantasauna</td>
+
+                <td class="varattu">Varattu</td>
+
+                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-18')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-19')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="varattu">Varattu</td>
+
+                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-21')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-22')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-23')">
+                    Vapaa<br>18-22
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mökkisauna</td>
+
+                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-17')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-18')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="varattu">Varattu</td>
+
+                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-20')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-21')">
+                    Vapaa<br>18-22
+                </td>
+
+                <td class="varattu">Varattu</td>
+
+                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-23')">
+                    Vapaa<br>18-22
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
     <main>
     <img src="Kuvat/Savusauna.jpg" alt="Perinteinen savusauna">
 
@@ -28,6 +153,58 @@
         saunaelämyksen luonnon keskellä.
     </p>
     </main>
+
+<section id="varauslomake">
+
+    <h2>Tee varaus</h2>
+
+    <form>
+
+        <label>Sauna</label>
+        <select id="sauna">
+            <option>Savusauna</option>
+            <option>Rantasauna</option>
+            <option>Mökkisauna</option>
+        </select>
+
+        <label>Päivämäärä</label>
+        <input type="date" id="paivamaara">
+
+        <label>Nimi</label>
+        <input type="text" required>
+
+        <label>Sähköposti</label>
+        <input type="email" required>
+
+        <label>Puhelin</label>
+        <input type="tel" required>
+
+        <button type="submit">
+            Lähetä varaus
+        </button>
+
+    </form>
+
+</section>
+
+<script>
+
+function varaa(sauna, paiva)
+{
+    document.getElementById("sauna").value = sauna;
+
+    document.getElementById("paivamaara").value = paiva;
+
+    document
+        .getElementById("varauslomake")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+</script>
+
+  
 
     <footer>
         <p>&copy; 2026 Kuivasjärven Rantasaunat</p>
