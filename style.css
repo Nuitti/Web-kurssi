@@ -218,6 +218,244 @@ textarea {
     color: #262626;
 }
 
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    position: relative;
+    background-color: #33879a;
+    overflow: hidden;
+    text-align: center;
+
+    padding-right: 80px;
+}
+
+.top-bar::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 350px;
+    height: 250px;
+
+    background-image: url("Kuvat/leaf2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.top-bar::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: -100px;
+
+    width: 350px;
+    height: 250px;
+
+    background-image: url("Kuvat/leaf2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-position: top right;
+    transform: scaleX(-1);
+
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.top-bar h1 { 
+    margin: 0;
+    color: white;
+    margin-right: 400px;
+}
+
+.top-bar nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    background: transparent;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.top-bar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar nav a:hover {
+    color: orange;
+}
+
+.sauna-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    background-color: #121212;
+}
+
+.sauna-card-container {
+    text-align: center;
+}
+
+.sauna-card-container h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.sauna-card {
+    width: 260px;
+    height: 380px;
+    border-radius: 12px;
+    border: 3px solid white;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.sauna-card:hover {
+    transform: scale(1.03);
+}
+
+.smoke-sauna {
+    background-image: url("Kuvat/Savusauna.jpg");
+}
+
+.beach-sauna {
+    background-image: url("Kuvat/sauna2.jpg");
+}
+
+.cottage-sauna {
+    background-image: url("Kuvat/sauna1.jpg");
+}
+
+.sauna-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: #2f8ca0;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sauna-btn:hover {
+    background-color: #256f7f;
+}
+
+.sauna-osio {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    border-bottom: 4px solid #2f8ca0;
+}
+
+#savusauna {
+    background-image: url("Kuvat/Savusauna.jpg");
+}
+
+#rantasauna {
+    background-image: url("Kuvat/sauna2.jpg");
+}
+
+#mokkisauna {
+    background-image: url("Kuvat/sauna1.jpg");
+}
+
+.sauna-overlay {
+    background: rgba(0,0,0,0.65);
+    color: white;
+
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.sauna-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sauna-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.sauna-osio {
+    min-height: 100vh;
+    scroll-snap-align: start;
+}
+
+.saunat-otsikko {
+    scroll-snap-align: start;
+}
+
+.top-bar {
+    scroll-snap-align: start;
+}
+
+#rantasauna,
+#mokkisauna {
+    scroll-snap-align: start;
+}
+
+
+.saunat-otsikko {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #05070d;
+}
+
+.saunat-otsikko h2 {
+    color: white;
+    font-size: 3rem;
+}
+
+.sauna-overlay {
+    background: rgba(0,0,0,0.7);
+}
+
+body {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.8),
+            rgba(0,0,0,.8)
+        ),
+        url("Kuvat/tunnelma.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 img {
     max-width: 100%;
     height: auto;

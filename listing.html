@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,54 @@
 
 <body>
 
-    <header>
-        <h1>Saunat</h1>
-    </header>
+    <div class="top-bar">
+    <h1>Kuivasjärven Rantasaunat</h1>
+    
+        <nav>
+            <a href="index.html">Etusivu</a>
+            <a href="listing.html">Saunat</a>
+            <a href="contact.html">Yhteystiedot</a>
+            <a href="about.html">Tietoa meistä</a>
+        </nav>
+    </div>
 
-    <nav>
-        <a href="index.html">Etusivu</a>
-        <a href="about.html">Tietoa meistä</a>
-        <a href="listing.html">Saunat</a>
-        <a href="contact.html">Yhteystiedot</a>
-    </nav>
+    <div class="saunat-otsikko">
+        <h2>Saunat</h2>
+    </div>
 
-    <main>
-    <img src="Kuvat/WAS.gif" width="600" height="400" alt="TA">
-    <img src="Kuvat/1000pixel.png" width="600" height="400" alt="1000pixel">
+    <main class="saunat-sivu">
+
+        <section id="savusauna" class="sauna-osio">
+            <div class="sauna-overlay">
+                <h2>Savusauna</h2>
+                <p>
+                    Perinteinen suomalainen savusauna järven rannalla.
+                    Tilava löylyhuone ja rauhallinen ympäristö tarjoavat
+                    aidon saunaelämyksen.
+                </p>
+            </div>
+        </section>
+
+        <section id="rantasauna" class="sauna-osio">
+            <div class="sauna-overlay">
+                <h2>Rantasauna</h2>
+                <p>
+                    Rantasauna sijaitsee aivan veden äärellä.
+                    Saunasta pääsee suoraan laiturille uimaan.
+                </p>
+            </div>
+        </section>
+
+        <section id="mokkisauna" class="sauna-osio">
+            <div class="sauna-overlay">
+                <h2>Mökkisauna</h2>
+                <p>
+                    Tunnelmallinen mökkisauna luonnon keskellä.
+                    Soveltuu hyvin pienemmille seurueille.
+                </p>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -30,4 +65,5 @@
     </footer>
 
 </body>
+
 </html>
