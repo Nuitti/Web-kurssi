@@ -209,13 +209,91 @@ button:hover {
 }
 
 #varauslomake {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+
+    background: rgba(20, 20, 20, 0.95);
+
+    border-radius: 15px;
+    border: 2px solid #2f8ca0;
+
+    box-shadow: 0 0 30px rgba(47, 140, 160, 0.25);
+}
+
+#varauslomake h2 {
+    text-align: center;
     color: white;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
 }
 
 input,
 select,
 textarea {
     color: #262626;
+}
+
+#varauslomake form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#varauslomake label {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#varauslomake input,
+#varauslomake select {
+    width: 100%;
+    padding: 15px;
+
+    border: 2px solid #2f8ca0;
+    border-radius: 8px;
+
+    background-color: #1f1f1f;
+    color: white;
+
+    font-size: 1rem;
+
+    box-sizing: border-box;
+}
+
+#varauslomake input:focus,
+#varauslomake select:focus {
+    outline: none;
+
+    border-color: #4fc3dc;
+
+    box-shadow:
+        0 0 10px rgba(79, 195, 220, 0.5);
+}
+
+#varauslomake button {
+    margin-top: 20px;
+    padding: 15px;
+
+    background-color: #2f8ca0;
+
+    color: white;
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#varauslomake button:hover {
+    background-color: #256f7f;
+    transform: translateY(-2px);
 }
 
 .top-bar {
@@ -406,27 +484,7 @@ textarea {
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
-
-.sauna-osio {
-    min-height: 100vh;
-    scroll-snap-align: start;
-}
-
-.saunat-otsikko {
-    scroll-snap-align: start;
-}
-
-.top-bar {
-    scroll-snap-align: start;
-}
-
-#rantasauna,
-#mokkisauna {
-    scroll-snap-align: start;
-}
-
 
 .saunat-otsikko {
     text-align: center;
@@ -443,7 +501,7 @@ html {
     background: rgba(0,0,0,0.7);
 }
 
-body {
+.saunat-page {
     background-image:
         linear-gradient(
             rgba(0,0,0,.8),
@@ -454,6 +512,28 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.varaa-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 28px;
+
+    background-color: #2f8ca0;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.varaa-btn:hover {
+    background-color: #256f7f;
+    transform: translateY(-2px);
 }
 
 img {
