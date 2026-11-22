@@ -183,3 +183,45 @@ if (calendarTable) {
 
 }
 
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const phoneField = document.getElementById("phone");
+    const subjectField = document.getElementById("subject");
+    const messageField = document.getElementById("message");
+
+    // Ladataan tallennetut tiedot
+    nameField.value = localStorage.getItem("name") || "";
+    emailField.value = localStorage.getItem("email") || "";
+    phoneField.value = localStorage.getItem("phone") || "";
+    subjectField.value = localStorage.getItem("subject") || "";
+    messageField.value = localStorage.getItem("message") || "";
+
+    // Tallennetaan aina kun käyttäjä kirjoittaa
+    nameField.addEventListener("input", () => {
+        localStorage.setItem("name", nameField.value);
+    });
+
+    emailField.addEventListener("input", () => {
+        localStorage.setItem("email", emailField.value);
+    });
+
+    phoneField.addEventListener("input", () => {
+        localStorage.setItem("phone", phoneField.value);
+    });
+
+    subjectField.addEventListener("input", () => {
+        localStorage.setItem("subject", subjectField.value);
+    });
+
+    messageField.addEventListener("input", () => {
+        localStorage.setItem("message", messageField.value);
+    });
+
+    document.getElementById("formStatus").textContent = "Pyyntö on valmis";
+
+}
