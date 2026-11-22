@@ -15,6 +15,7 @@
             <h1>Kuivasjärven Rantasaunat</h1>
 
         <nav>
+            <a href="index.html">Etusivu</a>
             <a href="listing.html">Saunat</a>
             <a href="contact.html">Yhteystiedot</a>
             <a href="about.html">Tietoa meistä</a>
@@ -79,6 +80,8 @@
         <button id="nextWeek">→</button>
     </div>
 
+
+<div class="table-wrapper">
     <table class="calendar">
         <thead>
            <tr class="date-row">
@@ -195,6 +198,7 @@
             </tr>
         </tbody>
     </table>
+</div>
 </section>
 
 
@@ -204,24 +208,25 @@
 
     <form>
 
-        <label>Sauna</label>
+        <label for="sauna">Sauna</label>
         <select id="sauna">
             <option>Savusauna</option>
             <option>Rantasauna</option>
             <option>Mökkisauna</option>
         </select>
 
-        <label>Päivämäärä</label>
+        <label for="paivamaara">Päivämäärä</label>
         <input type="date" id="paivamaara">
 
-        <label>Nimi</label>
-        <input type="text" required>
+        <label for="nimi">Nimi</label>
+        <input type="text" id="nimi" required>
 
-        <label>Sähköposti</label>
-        <input type="email" required>
+        <label for="sahkoposti">Sähköposti</label>
+        <input type="email" id="sahkoposti" required>
 
-        <label>Puhelin</label>
-        <input type="tel" required>
+        <label for="puhelin">Puhelin</label>
+        <input type="tel" id="puhelin" required>
+
 
         <button type="submit">
             Lähetä varaus
