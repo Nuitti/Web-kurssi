@@ -428,6 +428,12 @@ textarea {
     transform: scale(1.03);
 }
 
+.sauna-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .smoke-sauna {
     background-image: url("Kuvat/Savusauna.jpg");
 }
@@ -555,17 +561,23 @@ html {
     transform: translateY(-2px);
 }
 
-.today {
-    box-shadow:
-        inset 0 0 0 2px #ffffff,
-        0 0 20px rgba(255,255,255,0.5);
-}
 
 .today-column {
+
+    border-left: 4px solid #36d9ff;
+    border-right: 4px solid #36d9ff;
+
     box-shadow:
-        inset 3px 0 0 #ffffff,
-        inset -3px 0 0 #ffffff,
-        0 0 18px rgba(255,255,255,0.5);
+        inset 0 0 20px rgba(54,217,255,0.25),
+        0 0 25px rgba(54,217,255,0.7);
+}
+
+.today {
+    color: white;
+
+    box-shadow:
+        inset 0 0 20px rgba(54,217,255,0.3),
+        0 0 25px rgba(54,217,255,0.7);
 }
 
 #searchResults {

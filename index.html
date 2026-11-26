@@ -107,95 +107,7 @@
             </tr>
         </thead>
 
-        <tbody>
-
-            <tr>
-                <td>Savusauna</td>
-
-                <td class="vapaa" onclick="varaa('Savusauna','2026-11-17')">
-                    Vapaa<br>18-22
-                 </td>
-
-                <td class="vapaa" onclick="varaa('Savusauna','2026-11-18')">
-                    Vapaa<br>18-22
-                 </td>
-
-                <td class="varattu">
-                    Varattu
-                </td>
-
-                <td class="vapaa" onclick="varaa('Savusauna','2026-11-20')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="vapaa" onclick="varaa('Savusauna','2026-11-21')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="varattu">
-                    Varattu
-                </td>
-
-                <td class="vapaa" onclick="varaa('Savusauna','2026-11-23')">
-                    Vapaa<br>18-22
-                </td>
-            </tr>   
-
-            <tr>
-                <td>Rantasauna</td>
-
-                <td class="varattu">Varattu</td>
-
-                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-18')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-19')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="varattu">Varattu</td>
-
-                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-21')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-22')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="vapaa" onclick="varaa('Rantasauna','2026-11-23')">
-                    Vapaa<br>18-22
-                </td>
-            </tr>
-
-            <tr>
-                <td>Mökkisauna</td>
-
-                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-17')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-18')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="varattu">Varattu</td>
-
-                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-20')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-21')">
-                    Vapaa<br>18-22
-                </td>
-
-                <td class="varattu">Varattu</td>
-
-                <td class="vapaa" onclick="varaa('Mökkisauna','2026-11-23')">
-                    Vapaa<br>18-22
-                </td>
-            </tr>
+        <tbody id="calendarBody">
         </tbody>
     </table>
 </div>
@@ -232,29 +144,42 @@
             Lähetä varaus
         </button>
 
+        <p
+            id="varausStatus"
+            role="status"
+            aria-live="polite">
+        </p>
+
     </form>
 
-</section>
+    <section class="varaushaku">
 
-<script>
+    <h3>Hae varauksesi</h3>
 
-function varaa(sauna, paiva)
-{
-    document.getElementById("sauna").value = sauna;
+    <label for="asiakasnumero">
+        Asiakasnumero
+    </label>
 
-    document.getElementById("paivamaara").value = paiva;
+    <input
+        type="text"
+        id="asiakasnumero">
 
-    document
-        .getElementById("varauslomake")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-}
+    <button
+        type="button"
+        id="haeVaraus">
+        Hae
+    </button>
 
-</script>
+    <p
+        id="haeTulos"
+        role="status"
+        aria-live="polite">
+    </p>
 
+    </section>
+
+    </section>
   
-
     <footer>
         <p>&copy; 2026 Kuivasjärven Rantasaunat</p>
     </footer>
