@@ -11,7 +11,7 @@
 
 <body class="saunat-page">
 
-    <div class="top-bar">
+    <header class="top-bar">
     <h1>Kuivasjärven Rantasaunat</h1>
     
         <nav>
@@ -20,11 +20,26 @@
             <a href="contact.html">Yhteystiedot</a>
             <a href="about.html">Tietoa meistä</a>
         </nav>
-    </div>
+    </header>
 
     <div class="saunat-otsikko">
         <h2>Saunat</h2>
     </div>
+
+<div class="search-box">
+    <label for="saunaSearch">
+        Hae saunaa
+    </label>
+
+    <input
+        type="text"
+        id="saunaSearch"
+        placeholder="Esim. savu">
+</div>
+
+<p id="filterStatus" role="status">
+    Näytetään kaikki saunat
+</p>
 
     <main class="saunat-sivu">
 

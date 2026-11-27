@@ -13,6 +13,9 @@
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 2rem;
+
+    --button-color: #236b78;
+    --button-hover: #1d5863;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +29,11 @@
      nav a {
         color: white;
     }
+
+    .sauna-card-container h2 {
+        color: white;
+    }
+
 }
 
 h1,
@@ -57,7 +65,7 @@ h6 {
         margin-right: 0;
     }
 
-    .topbar nav {
+    .top-bar nav {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -86,10 +94,11 @@ body {
 
 main {
     flex: 1;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem;
 }
+
 
 header {
     background-color: var(--header-color);
@@ -160,18 +169,13 @@ button:hover {
 
 .calendar-section {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-    margin: 0 auto;
-    max-width: 1100px;
+    max-width: 100%;
+    margin: 2rem auto;
 }
 
 .calendar {
-    border-collapse: collapse;
     width: 100%;
-    text-align: center;
+    border-collapse: collapse;
 }
 
 .calendar-header {
@@ -204,21 +208,48 @@ button:hover {
     font-size: 1.1rem;
 }
 
-.vapaa {
-    background-color: var(--header-color);
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
+.calendar td {
+    padding: 0;
 }
 
-.vapaa:hover {
+.calendar td button {
+    width: 100%;
+    min-height: 70px;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0.75rem;
+
+    font: inherit;
+    font-weight: bold;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+.calendar td button.vapaa {
+    background-color: var(--header-color);
+    color: white;
+}
+
+.calendar td button.vapaa:hover {
     filter: brightness(1.1);
 }
 
-.varattu {
+.calendar td button.varattu {
     background-color: #ffa500;
     color: #000;
-    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.calendar td button:disabled {
+    opacity: 1;
+}
+
+.calendar td button:focus {
+    outline: 3px solid white;
+    outline-offset: -3px;
 }
 
 .calendar td:first-child {
@@ -409,10 +440,11 @@ textarea {
 }
 
 .sauna-card-container h2 {
-    color: white;
+    color: #236b78;
     margin-bottom: 15px;
     font-size: 1.8rem;
 }
+
 
 .sauna-card {
     width: 260px;
@@ -450,7 +482,7 @@ textarea {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 24px;
-    background-color: #2f8ca0;
+    background-color: var(--button-color);
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -459,7 +491,7 @@ textarea {
 }
 
 .sauna-btn:hover {
-    background-color: #256f7f;
+    background-color: var(--button-hover);
 }
 
 .sauna-osio {
@@ -545,7 +577,7 @@ html {
     margin-top: 25px;
     padding: 12px 28px;
 
-    background-color: #2f8ca0;
+    background-color: var(--button-color);
     color: white;
 
     text-decoration: none;
@@ -557,7 +589,7 @@ html {
 }
 
 .varaa-btn:hover {
-    background-color: #256f7f;
+    background-color: var(--button-hover);
     transform: translateY(-2px);
 }
 
@@ -630,7 +662,7 @@ html {
     border: none;
     border-radius: 12px;
 
-    background: #2f8596;
+    background: var(--button-color);
     color: white;
 
     font-size: 1.1rem;
@@ -642,7 +674,7 @@ html {
 }
 
 #searchBtn:hover {
-    background: #3aa6ba;
+    background: var(--button-hover);
 
     box-shadow:
         0 0 20px rgba(77, 234, 255, 0.5);
@@ -726,7 +758,7 @@ html {
     border: none;
     border-radius: 12px;
 
-    background: #2f8596;
+    background: var(--button-color);
     color: white;
 
     font-size: 1.1rem;
@@ -738,7 +770,7 @@ html {
 }
 
 .contact-form button:hover {
-    background: #39a4b9;
+    background: var(--button-hover);
 
     box-shadow:
         0 0 20px rgba(42, 190, 220, 0.5);
@@ -761,7 +793,34 @@ textarea:focus:invalid {
 }
 
 .table-wrapper {
+    width: 100%;
     overflow-x: auto;
+}
+
+.calendar td button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.calendar td button:focus {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+.calendar th,
+.calendar td {
+    min-width: 70px;
+    padding: 0.5rem;
+}
+
+.sauna-btn:focus,
+.varaa-btn:focus {
+    outline: 3px solid orange;
+    outline-offset: 4px;
 }
 
 img {

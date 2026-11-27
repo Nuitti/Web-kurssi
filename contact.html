@@ -11,7 +11,7 @@
 <body>
 
     
-        <div class="top-bar">
+        <header class="top-bar">
             <h1>Kuivasjärven Rantasaunat</h1>
 
         <nav>
@@ -20,7 +20,7 @@
             <a href="contact.html">Yhteystiedot</a>
             <a href="about.html">Tietoa meistä</a>
         </nav>
-    </div>
+    </header>
 
     <main>
     
@@ -28,46 +28,49 @@
 
     <h2>Ota yhteyttä</h2>
 
-    <form id="contactForm">
+    <form id="contactForm" novalidate>
 
-        <label for="name">Nimi</label>
+        <label for="nimi">Nimi</label>
         <input
             type="text"
-            id="name"
+            id="nimi"
             required
-            aria-describedby="nameError">
-        <span id="nameError" class="error-message"></span>
+            aria-describedby="nimiError">
+        <span id="nimiError" class="error-message"></span>
 
-        <label for="email">Sähköposti</label>
+        <label for="sahkoposti">Sähköposti</label>
         <input
             type="email"
-            id="email"
-            required
+            id="sahkoposti"
             aria-describedby="emailError">
-        <span id="emailError" class="error-message"></span>
 
-        <label for="phone">Puhelinnumero</label>
+        <span
+            id="emailError"
+            class="error-message">
+        </span>
+
+        <label for="puhelin">Puhelinnumero</label>
         <input
             type="tel"
-            id="phone"
-            aria-describedby="phoneError">
-        <span id="phoneError" class="error-message"></span>
+            id="puhelin"
+            aria-describedby="puhelinError">
+        <span id="puhelinError" class="error-message"></span>
 
-        <label for="subject">Aihe</label>
+        <label for="aihe">Aihe</label>
         <input
             type="text"
-            id="subject"
+            id="aihe"
             required
-            aria-describedby="subjectError">
-        <span id="subjectError" class="error-message"></span>
+            aria-describedby="aiheError">
+        <span id="aiheError" class="error-message"></span>
 
-        <label for="message">Viesti</label>
+        <label for="viesti">Viesti</label>
         <textarea
-            id="message"
+            id="viesti"
             rows="6"
             required
-            aria-describedby="messageError"></textarea>
-        <span id="messageError" class="error-message"></span>
+            aria-describedby="viestiError"></textarea>
+        <span id="viestiError" class="error-message"></span>
         
         <button type="submit">
             Lähetä viesti

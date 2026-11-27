@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="top-bar">
+    <header class="top-bar">
             <h1>Kuivasjärven Rantasaunat</h1>
 
         <nav>
@@ -20,8 +20,8 @@
             <a href="contact.html">Yhteystiedot</a>
             <a href="about.html">Tietoa meistä</a>
         </nav>
-    </div>
-
+    </header>
+<main>
 <section class="sauna-cards">
     <div class="sauna-card-container">
         <h2>Savusauna</h2>
@@ -71,12 +71,21 @@
 
 </div>
 
+    <div
+        id="calendarStatus"
+        role="status"
+        aria-live="polite">
+    </div>
+
+    <div id="companyInfo"></div>
+
+
     <div id="searchResults"></div>
 
     <section class="calendar-section">
     <div class="calendar-header">
         <button id="prevWeek">←</button>
-        <h2>Tämän viikon vapaat ajat</h2>
+        <h2>Ajan Varaus</h2>
         <button id="nextWeek">→</button>
     </div>
 
@@ -93,10 +102,24 @@
                 <th id="date4"></th>
                 <th id="date5"></th>
                 <th id="date6"></th>
+                <th id="date7"></th>
+                <th id="date8"></th>
+                <th id="date9"></th>
+                <th id="date10"></th>
+                <th id="date11"></th>
+                <th id="date12"></th>
+                <th id="date13"></th>
             </tr>
 
             <tr class="weekday-row">
                 <th>Sauna</th>
+                <th>Ma</th>
+                <th>Ti</th>
+                <th>Ke</th>
+                <th>To</th>
+                <th>Pe</th>
+                <th>La</th>
+                <th>Su</th>
                 <th>Ma</th>
                 <th>Ti</th>
                 <th>Ke</th>
@@ -139,6 +162,9 @@
         <label for="puhelin">Puhelin</label>
         <input type="tel" id="puhelin" required>
 
+        <p id="kokonaishinta">
+            Kokonaishinta: 0 €
+        </p>
 
         <button type="submit">
             Lähetä varaus
@@ -180,6 +206,8 @@
 
     </section>
   
+</main>
+
     <footer>
         <p>&copy; 2026 Kuivasjärven Rantasaunat</p>
     </footer>
